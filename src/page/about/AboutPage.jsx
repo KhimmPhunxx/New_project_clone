@@ -7,7 +7,7 @@ export default function AboutPage() {
   return (
    <main className='bg-white dark:bg-black'>
       <section className='max-w-5xl mx-auto mt-3'>
-        <h1 className='pop text-[30px] font-semibold tracking-wide text-gray-700 px-5 lg:px-0 dark:text-white'>About Us</h1>
+        <h1 className='pop text-[30px] font-semibold tracking-wide text-gray-700 px-5 lg:px-0 dark:text-white'>About Us Update</h1>
         <div className='border-t border-gray-300 dark:border-gray-800 mt-2 mx-5 lg:mx-0'></div>
         <div className='mt-5'>
          <Conten01API />

@@ -32,6 +32,11 @@ export default function LayoutPage() {
         document.documentElement.classList.toggle('dark');
     }
 
+    const toggleThemeToLight = () => {
+        document.documentElement.classList.remove('dark');
+    }
+
+
   return (
     <main className='w-full bg-white dark:bg-black'>
          <ScrollToTop 
@@ -60,10 +65,10 @@ export default function LayoutPage() {
                 <div className='w-full border-gray-100 border dark:border-0 '>
                     <nav className='max-w-6xl mx-auto relative'>
                         <div className='max-w-5xl px-5 lg:px-3 lg:max-w-6xl mx-auto flex justify-between py-4'>
-                            <div className='flex space-x-6 w-16 h-10 dark:hidden'>
+                            <div className='flex space-x-6 w-14 h-10 dark:hidden'>
                                 <NavLink to=""><img className='w-full h-full object-cover rounded' src={logo} alt="" /></NavLink>
                             </div>
-                            <div className='hidden dark:flex space-x-6 w-16 h-10'>
+                            <div className='hidden dark:flex space-x-6 w-14 h-10'>
                                 <NavLink to=""><img className='w-full h-full object-cover rounded' src={logo_white} alt="" /></NavLink>
                             </div>
                             <div className='md:flex  lg:space-x-6 hidden'>
@@ -73,8 +78,8 @@ export default function LayoutPage() {
                                         <NavLink to='service' className={({isActive})=> isActive ? 'pop menubar_active px-2 relative font-[400] text-[#615EAB] text-[16px]' : 'pop menubar hover:text-[#615EAB] font-[400] text-gray-700 text-[16px] relative px-2 dark:text-white'}>Service</NavLink>
                                         <NavLink to='blog' className={({isActive})=> isActive ? 'pop menubar_active px-2 relative font-[400] text-[#615EAB] text-[16px]' : 'pop menubar hover:text-[#615EAB] font-[400] text-gray-700 text-[16px] relative px-2 dark:text-white'}>Blog</NavLink>
                                         <div>
-                                            <NavLink onClick={()=>toggleTheme()}  ><p className='pop font-[400] text-gray-800 hover:text-[#615EAB] duration-300 block dark:hidden'><FiSun className='text-[20px] mt-1' /></p></NavLink>
-                                            <NavLink  onClick={()=>toggleTheme()} ><p className='pop font-[400] hover:text-[#615EAB] duration-300 hidden dark:block'><FiMoon className='text-[20px] mt-1' /></p></NavLink>
+                                            <NavLink onClick={()=> toggleTheme()}  ><p className='pop font-[400] text-gray-800 hover:text-[#615EAB] duration-300 block dark:hidden'><FiSun className='text-[20px] mt-1' /></p></NavLink>
+                                            <NavLink  onClick={()=> toggleThemeToLight()} ><p className='pop font-[400] hover:text-[#615EAB] duration-300 hidden dark:block'><FiMoon className='text-[20px] mt-1' /></p></NavLink>
                                         </div>
                                 </div>
                                     <button onClick={()=> navigate('contact')} className='hover:bg-[#615EAB] bg-blue-50 font-[400] duration-300 py-1 px-4 rounded pop text-[#615EAB] hover:text-white dark:bg-gray-900 dark:text-gray-100 dark:hover:bg-[#615EAB]'>Contact</button>
