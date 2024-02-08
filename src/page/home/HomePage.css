@@ -1,0 +1,13 @@
+.menubar01:after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2.5px;
+    background: #343446;
+    left: 0;
+    bottom: -1px;
+    transition: 0.8s;
+}
+.menubar01:hover:after{
+    width: 100%;
+}
