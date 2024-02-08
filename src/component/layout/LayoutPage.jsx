@@ -33,7 +33,10 @@ export default function LayoutPage() {
     }
 
     const toggleThemeToLight = () => {
-        document.documentElement.classList.remove('dark');
+        // change to light theme when computer on darkmode
+        if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+            document.documentElement.classList.remove('dark');
+        }
     }
 
 
